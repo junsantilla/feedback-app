@@ -1,6 +1,6 @@
 import FeedbackItem from "./FeedbackItem";
 
-function FeedbackList({ feedback }) {
+function FeedbackList({ feedback, handledelete }) {
 	if (!feedback || feedback.length === 0) {
 		return <div>No feedback yet!</div>;
 	}
@@ -9,7 +9,11 @@ function FeedbackList({ feedback }) {
 		<div className="feedback-list">
 			{feedback.map((item) => (
 				// <li key={item.id}>{item.text}</li>
-				<FeedbackItem key={item.id} item={item} />
+				<FeedbackItem
+					key={item.id}
+					item={item}
+					handledelete={handledelete}
+				/>
 			))}
 		</div>
 	);
