@@ -1,6 +1,6 @@
 import FeedbackItem from "./FeedbackItem";
 
-function FeedbackList({ feedback, handledelete }) {
+function FeedbackList({ feedback, handleDelete }) {
 	if (!feedback || feedback.length === 0) {
 		return <div>No feedback yet!</div>;
 	}
@@ -12,7 +12,7 @@ function FeedbackList({ feedback, handledelete }) {
 				<FeedbackItem
 					key={item.id}
 					item={item}
-					handledelete={handledelete}
+					handleDelete={handleDelete}
 				/>
 			))}
 		</div>
