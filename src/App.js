@@ -10,13 +10,11 @@ function App() {
 	const [feedback, setFeedback] = useState(FeedbackData);
 
 	const deleteitem = (id) => {
-		// console.log(id);
 		setFeedback(feedback.filter((item) => item.id !== id));
 	};
 
 	const addFeedback = (newFeedback) => {
 		newFeedback.id = uuidv4();
-		console.log(newFeedback);
 		setFeedback([newFeedback, ...feedback]);
 	};
 
